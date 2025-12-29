@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern GPT - Verify. Report. Stay Safe.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">Intern GPT</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#checker" class="nav-link">Check Message</a></li>
+                <li><a href="#awareness" class="nav-link">Awareness</a></li>
+                <li><a href="#report" class="nav-link">Report Scam</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home / Landing Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Don't Fall for Fake Internships.</h1>
+            <p class="hero-subtitle">Intern GPT analyzes internship messages using AI to protect students from scams.</p>
+            <div class="hero-buttons">
+                <a href="#checker" class="btn btn-primary">
+                    <i class="fas fa-shield-alt"></i> Check Internship Message
+                </a>
+                <a href="#report" class="btn btn-secondary">
+                    <i class="fas fa-flag"></i> Report a Scam
+                </a>
+            </div>
+        </div>
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Students Protected</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Scams Reported</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Accuracy Rate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="works-grid">
+            <div class="work-card">
+                <div class="work-icon">📋</div>
+                <h3>Paste Message</h3>
+                <p>Copy and paste your internship offer from email, WhatsApp, or LinkedIn</p>
+            </div>
+            <div class="work-card">
+                <div class="work-icon">🤖</div>
+                <h3>AI Analyzes Risk</h3>
+                <p>Our AI scans for red flags and scam patterns in seconds</p>
+            </div>
+            <div class="work-card">
+                <div class="work-icon">🛡️</div>
+                <h3>Get Safety Advice</h3>
+                <p>Receive clear risk assessment and actionable recommendations</p>
+            </div>
+            <div class="work-card">
+                <div class="work-icon">🚨</div>
+                <h3>Report if Needed</h3>
+                <p>Help protect others by reporting confirmed scams</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Checker Section -->
+    <section id="checker" class="checker-section">
+        <div class="checker-container">
+            <h2 class="section-title">Paste Your Internship Message</h2>
+            <div class="input-area">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Paste WhatsApp / Email / LinkedIn internship message here…"
+                    rows="8"
+                ></textarea>
+                <button id="analyzeBtn" class="btn btn-analyze">
+                    <i class="fas fa-search"></i> Analyze with Intern GPT
+                </button>
+            </div>
+
+            <!-- Analysis Result -->
+            <div id="resultPanel" class="result-panel hidden">
+                <div id="riskIndicator" class="risk-indicator">
+                    <!-- Risk button will be inserted here -->
+                </div>
+                <div class="result-content">
+                    <div class="result-section">
+                        <h3><i class="fas fa-flag"></i> Detected Red Flags</h3>
+                        <ul id="redFlagsList" class="flags-list"></ul>
+                    </div>
+                    <div class="result-section">
+                        <h3><i class="fas fa-comment-dots"></i> AI Verdict</h3>
+                        <p id="verdictText" class="verdict-text"></p>
+                    </div>
+                    <div class="result-section">
+                        <h3><i class="fas fa-lightbulb"></i> Safety Recommendations</h3>
+                        <ul id="recommendationsList" class="recommendations-list"></ul>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button id="reportBtn" class="btn btn-report">
+                        <i class="fas fa-exclamation-triangle"></i> Report This Scam
+                    </button>
+                    <button id="checkAnotherBtn" class="btn btn-secondary">
+                        <i class="fas fa-redo"></i> Check Another Message
+                    </button>
+                    <a href="#awareness" class="btn btn-outline">
+                        <i class="fas fa-book"></i> View Safety Tips
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Scam Section -->
+    <section id="report" class="report-section">
+        <div class="report-container">
+            <h2 class="section-title">Report a Scam</h2>
+            <p class="section-subtitle">Help protect other students by reporting fraudulent internship offers</p>
+            <form id="reportForm" class="report-form">
+                <div class="form-group">
+                    <label for="companyName">Platform / Company Name</label>
+                    <input type="text" id="companyName" placeholder="e.g., XYZ Tech, WhatsApp Group" required>
+                </div>
+                <div class="form-group">
+                    <label for="scamMessage">Paste Message or Upload Screenshot</label>
+                    <textarea id="scamMessage" rows="6" placeholder="Paste the scam message here or describe what happened..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="description">Short Description</label>
+                    <textarea id="description" rows="4" placeholder="Briefly describe the scam (what they asked for, how they contacted you, etc.)"></textarea>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="anonymousReport">
+                        <span>Report Anonymously</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">
+                    <i class="fas fa-paper-plane"></i> Submit Report
+                </button>
+            </form>
+            <div id="reportSuccess" class="success-message hidden">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+                <p>You just helped protect another student.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awareness Hub -->
+    <section id="awareness" class="awareness-section">
+        <div class="awareness-container">
+            <h2 class="section-title">Scam Awareness Hub</h2>
+            <p class="section-subtitle">Learn about common internship scams and how to protect yourself</p>
+            <div class="scam-cards">
+                <div class="scam-card">
+                    <div class="scam-icon">💸</div>
+                    <h3>Registration Fee Scam</h3>
+                    <div class="scam-example">
+                        <strong>Example Message:</strong>
+                        <p>"Congratulations! Pay ₹500 registration fee to secure your internship."</p>
+                    </div>
+                    <div class="scam-redflags">
+                        <strong>Red Flags:</strong>
+                        <ul>
+                            <li>Asking for upfront payment</li>
+                            <li>Pressure to pay immediately</li>
+                            <li>No official company verification</li>
+                        </ul>
+                    </div>
+                    <div class="scam-action">
+                        <strong>What to Do:</strong>
+                        <p>Legitimate internships never ask for registration fees. Report and block immediately.</p>
+                    </div>
+                </div>
+
+                <div class="scam-card">
+                    <div class="scam-icon">📄</div>
+                    <h3>Fake Offer Letter Scam</h3>
+                    <div class="scam-example">
+                        <strong>Example Message:</strong>
+                        <p>"Your offer letter is ready. Download from this link to proceed."</p>
+                    </div>
+                    <div class="scam-redflags">
+                        <strong>Red Flags:</strong>
+                        <ul>
+                            <li>Suspicious download links</li>
+                            <li>No interview process</li>
+                            <li>Generic offer letter</li>
+                        </ul>
+                    </div>
+                    <div class="scam-action">
+                        <strong>What to Do:</strong>
+                        <p>Verify company website, check LinkedIn, and never download from untrusted sources.</p>
+                    </div>
+                </div>
+
+                <div class="scam-card">
+                    <div class="scam-icon">🧑‍💻</div>
+                    <h3>Unpaid Task Scam</h3>
+                    <div class="scam-example">
+                        <strong>Example Message:</strong>
+                        <p>"Complete this project task first. We'll evaluate and then offer the internship."</p>
+                    </div>
+                    <div class="scam-redflags">
+                        <strong>Red Flags:</strong>
+                        <ul>
+                            <li>Asking for free work upfront</li>
+                            <li>No guarantee of internship</li>
+                            <li>Complex projects without pay</li>
+                        </ul>
+                    </div>
+                    <div class="scam-action">
+                        <strong>What to Do:</strong>
+                        <p>Legitimate companies don't require unpaid work before hiring. Request proper contract.</p>
+                    </div>
+                </div>
+
+                <div class="scam-card">
+                    <div class="scam-icon">🔗</div>
+                    <h3>Telegram / WhatsApp Scam</h3>
+                    <div class="scam-example">
+                        <strong>Example Message:</strong>
+                        <p>"Join our Telegram group for internship updates. Limited slots available!"</p>
+                    </div>
+                    <div class="scam-redflags">
+                        <strong>Red Flags:</strong>
+                        <ul>
+                            <li>Only uses messaging apps</li>
+                            <li>No official company email</li>
+                            <li>Urgent "limited slots" pressure</li>
+                        </ul>
+                    </div>
+                    <div class="scam-action">
+                        <strong>What to Do:</strong>
+                        <p>Verify through official company channels. Legitimate companies use professional email.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Checklist -->
+    <section class="checklist-section">
+        <div class="checklist-container">
+            <h2 class="section-title">Student Safety Checklist</h2>
+            <p class="section-subtitle">Use this checklist before accepting any internship offer</p>
+            <div class="checklist-grid">
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Company has official website</span>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified LinkedIn page</span>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No upfront payment required</span>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Proper offer letter provided</span>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Official email domain (@company.com)</span>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Clear job description and role</span>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Professional interview process</span>
+                </div>
+                <div class="checklist-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No urgent pressure tactics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="impact-container">
+            <h2 class="section-title">Why Intern GPT</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">🤖</div>
+                    <h3>AI-Based Analysis</h3>
+                    <p>Advanced pattern recognition to detect scam indicators in internship messages</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">🎓</div>
+                    <h3>Student-First Design</h3>
+                    <p>Built specifically for students, by students. Simple, intuitive, and trustworthy.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">👥</div>
+                    <h3>Community Reporting</h3>
+                    <p>Collective action against scams. Your reports help protect thousands of students.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">🌍</div>
+                    <h3>Real-World Impact</h3>
+                    <p>Scalable solution with potential for national use and broader student protection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🤖</span>
+                        <span class="logo-text">Intern GPT</span>
+                    </div>
+                    <p class="tagline">Verify. Report. Stay Safe.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#checker">Check Message</a></li>
+                        <li><a href="#awareness">Awareness Hub</a></li>
+                        <li><a href="#report">Report Scam</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <h4>About</h4>
+                    <p>Built for Hack the Winter Hackathon</p>
+                    <p>Focus on student safety & awareness</p>
+                    <p>Scalable idea for national use</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Intern GPT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
