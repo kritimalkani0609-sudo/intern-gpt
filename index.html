@@ -103,10 +103,29 @@
             </div>
 
             <!-- Analysis Result -->
+            <button id="analyzeBtn" class="btn btn-analyze">
+    <i class="fas fa-search"></i> Analyze with Intern GPT
+</button>
+            <!-- Frontend Contribution: Analysis Timeline -->
+<div id="analysisSteps" class="analysis-steps hidden">
+    <p>🔍 Scanning message...</p>
+    <p>🧠 Detecting scam patterns...</p>
+    <p>⚠️ Calculating risk level...</p>
+</div>
             <div id="resultPanel" class="result-panel hidden">
                 <div id="riskIndicator" class="risk-indicator">
                     <!-- Risk button will be inserted here -->
                 </div>
+                <!-- Frontend Contribution: Risk Score Meter -->
+<!-- Added by Aditya Farswan -->
+<div class="risk-meter">
+    <div class="meter-label">
+        Risk Score: <span id="riskScoreValue">0</span>/100
+    </div>
+    <div class="meter-bar">
+        <div id="meterFill" class="meter-fill"></div>
+    </div>
+</div>
                 <div class="result-content">
                     <div class="result-section">
                         <h3><i class="fas fa-flag"></i> Detected Red Flags</h3>
@@ -130,6 +149,10 @@
                     </button>
                     <a href="#awareness" class="btn btn-outline">
                         <i class="fas fa-book"></i> View Safety Tips
+                        <!-- Frontend Contribution: Share Result -->
+<button id="copyResultBtn" class="btn btn-outline">
+    <i class="fas fa-copy"></i> Copy Result
+</button>
                     </a>
                 </div>
             </div>
