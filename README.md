@@ -33,7 +33,9 @@ Risk level is generated (Low / Medium / High)
 Result and safety tips displayed
 ↓ End
 ## Data Flow Description (DFD – Level 0)
-Input: Internship message provided by the user Process: Rule-based text and pattern analysis Output: Risk verdict along with safety advice User: Student
+Input: Internship message provided by the user 
+Process: Rule-based text and pattern analysis 
+Output: Risk verdict along with safety advice User: Student
 Current Features (Prototype)
 Paste and analyze internship messages Detection of common scam patterns Risk level classification
  
