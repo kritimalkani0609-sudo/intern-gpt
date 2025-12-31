@@ -13,7 +13,7 @@ Intern GPT provides a simple way for students to check internship messages befor
 Assign a risk level (Low, Medium, or High)
 Display safety tips so students can take the right action
 The goal is to support students in making safer decisions, not to replace human judgment. 
-# System Flow / Technical Flow (Mandatory)
+# System Flow / Technical Flow 
 # Textual Flowchart 
 # Copy code
 Start
@@ -32,7 +32,7 @@ Risk level is generated (Low / Medium / High)
 ↓
 Result and safety tips displayed
 ↓ End
-## Data Flow Description (DFD – Level 0)
+## Data Flow Description (DFD)
 Input: Internship message provided by the user 
 Process: Rule-based text and pattern analysis 
 Output: Risk verdict along with safety advice User: Student
@@ -42,7 +42,8 @@ Paste and analyze internship messages Detection of common scam patterns Risk lev
 Simple and easy-to-use interface No login or personal data collection Tech Stack Used
 HTML – Structure of the website CSS – Styling and layout JavaScript – Analysis logic GitHub Pages – Hosting
 Live Project
-https://kritimalkani0609-sudo.github.io/intern-gpt/ GitHub Repository https://github.com/kritimalkani0609-sudo/intern-gpt Planned Improvements for Round-2 (Mandatory)
+https://kritimalkani0609-sudo.github.io/intern-gpt/ GitHub Repository https://github.com/kritimalkani0609-sudo/intern-gpt Planned 
+## Improvements for Round-2 
 In the next round, the project will be expanded with:
 ## AI/ML-based scam detection
 Screenshot upload support for chat and email analysis Company and domain verification
