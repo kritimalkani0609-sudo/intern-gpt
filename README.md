@@ -15,7 +15,6 @@ Display safety tips so students can take the right action
 The goal is to support students in making safer decisions, not to replace human judgment. 
 # System Flow / Technical Flow
 # Textual Flowchart 
-# Copy code
 Start
 ↓
 User pastes internship message
