@@ -1,56 +1,139 @@
-# Intern GPT — Internship Scam Detector
-# Verify internship, stay safe
-# Project overview
-Intern GPT is a web-based platform built to help students identify fake or suspicious internship offers.
-Students can paste internship messages received through platforms like WhatsApp, Email, LinkedIn, or Telegram, and the system analyzes the content to determine whether the offer looks safe or risky.
-The project is developed as a working prototype for Hack The Winter – Round 1, focusing on awareness, prevention, and simple verification.
-## Problem Statement
-With the increasing use of online platforms for hiring interns, internship scams have become very common. Students often receive offers that:
-Promise very high salaries or incentives Select candidates instantly without interviews Ask for registration, training, or security fees
-Due to excitement or lack of awareness, many students trust such messages and end up losing money, time, or personal information. 
-### Proposed Solution
-Intern GPT provides a simple way for students to check internship messages before responding. The platform analyzes the message using predefined scam indicators and logical checks to: Identify suspicious patterns
-Assign a risk level (Low, Medium, or High)
-Display safety tips so students can take the right action
-The goal is to support students in making safer decisions, not to replace human judgment. 
-# System Flow / Technical Flow
-# Textual Flowchart 
-Start
-↓
-User pastes internship message
-↓
-System scans text for keywords and patterns
-↓
-Checks for scam indicators such as:
--	Fee or payment requests
--	Urgent joining pressure
--	Unrealistic salary promises
--	Missing or unclear company details
-↓
-Risk level is generated (Low / Medium / High)
-↓
-Result and safety tips displayed
-↓ End
-## Data Flow Description (DFD)
-Input: Internship message provided by the user 
-Process: Rule-based text and pattern analysis 
-Output: Risk verdict along with safety advice User: Student
-Current Features (Prototype)
-Paste and analyze internship messages Detection of common scam patterns Risk level classification
- 
-Simple and easy-to-use interface No login or personal data collection Tech Stack Used
-HTML – Structure of the website CSS – Styling and layout JavaScript – Analysis logic GitHub Pages – Hosting
-Live Project
-https://kritimalkani0609-sudo.github.io/intern-gpt/ GitHub Repository https://github.com/kritimalkani0609-sudo/intern-gpt 
-## Planned Improvements for Round-2 
-In the next round, the project will be expanded with:
-## AI/ML-based scam detection
-Screenshot upload support for chat and email analysis Company and domain verification
-Risk confidence score
-## Multi-language support (including Hindi)
-Browser extension for platforms like LinkedIn or Gmail Improved UI and user experience
-## Team Contribution
-Problem research and idea development Frontend design and implementation Scam detection logic
-System ﬂow and documentation Conclusion
-Intern GPT aims to reduce the number of students falling victim to internship scams by providing quick and simple verification.
-The current prototype demonstrates the core idea and can be extended into a more advanced and scalable solution in future rounds.
+# Intern GPT – Internship Scam Detection System 🚨
+
+Intern GPT is a **rule-based internship scam detection web application** designed to help students identify fraudulent internship messages.  
+The system analyzes internship-related messages and classifies them into **Low, Medium, or High Risk**, along with **clear safety tips**.
+
+This project was built as part of the **Hack the Winter Hackathon** to address the growing issue of internship scams targeting students.
+
+---
+
+## 🔍 Problem Statement
+
+Many students receive internship offers via WhatsApp, Telegram, email, and social media.  
+These messages often:
+- Ask for upfront fees
+- Promise unrealistic salaries
+- Use suspicious links
+- Lack official contact details  
+
+Students often fail to identify scams early, leading to financial loss and data theft.
+
+---
+
+## 💡 Solution Overview
+
+Intern GPT provides a **simple and effective rule-based detection system** that:
+- Accepts internship messages as input
+- Matches them against predefined scam rules
+- Calculates risk level
+- Displays safety recommendations instantly
+
+The system focuses on **clarity, transparency, and explainability**, making it easy for students to understand *why* a message is risky.
+
+---
+
+## ⚙️ Key Features
+
+-  Internship message analysis  
+-  Rule-based scam detection logic  
+-  Risk classification (Low / Medium / High)  
+-  Safety tips for each risk level  
+-  Structured database design  
+-  Simple and user-friendly interface  
+
+---
+
+## 🧠 Rule-Based Analysis System
+
+The application uses a **Rule-Based Analysis System**, not AI or Machine Learning.
+
+### How it works:
+- Messages are scanned for predefined scam indicators such as:
+  - Keywords like *“registration fee”*, *“instant joining”*, *“limited slots”*
+  - Suspicious URLs
+  - Unrealistic salary claims
+- Each rule contributes to a **risk score**
+- Final output is generated based on total risk score
+
+### Why Rule-Based?
+- Transparent and explainable logic
+- Easy to validate and improve
+- No dependency on training data
+- Suitable for early-stage detection systems
+
+---
+
+## 🧩 System Architecture
+
+### 📌 Level 0 DFD
+- User submits internship message
+- System analyzes the message
+- Risk result and safety tips are returned
+
+### 📌 Level 1 DFD
+1. Receive & validate message  
+2. Analyze message using scam rules  
+3. Generate risk result and safety tips  
+
+(DFD diagrams are included in the repository)
+
+---
+
+## 🗄️ Database Schema
+
+The system uses a structured relational schema consisting of:
+
+### Tables:
+- **Users**
+  - user_id (PK)
+  - name
+  - email
+  - created_at
+
+- **Internship_Messages**
+  - message_id (PK)
+  - user_id (FK)
+  - message_text
+  - source_platform
+  - submitted_at
+
+- **Scam_Rules**
+  - rule_id (PK)
+  - rule_keyword
+  - rule_description
+
+- **Analysis_Results**
+  - result_id (PK)
+  - message_id (FK)
+  - risk_level (Low / Medium / High)
+  - risk_score
+  - safety_tips
+
+(Database schema diagram is included in the repository)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend Logic:** Rule-Based Analysis  
+- **Database Design:** Relational Schema  
+- **Hosting:** GitHub Pages  
+
+---
+
+## 🚀 How to Run the Project
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/kritimalkani0609-sudo/intern-gpt.gitOpen index.html in any modern browser
+Enter an internship message and analyze risk
+# 🎯 Use Cases
+Students verifying internship messages
+Colleges spreading scam awareness
+Early-stage fraud detection prototypes
+# 🔮 Future Scope
+Admin dashboard for managing scam rules
+Advanced risk scoring
+Integration with real-time reporting systems
+# Mobile-friendly version
