@@ -19,6 +19,11 @@ These messages often:
 Students often fail to identify scams early, leading to financial loss and data theft.
 
 ---
+## 🌐 Live Website
+
+Intern GPT – Internship Scam Detection System
+🔗 Live Demo: https://kritimalkani0609-sudo.github.io/intern-gpt/
+
 
 ## 💡 Solution Overview
 
