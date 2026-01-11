@@ -49,6 +49,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// DISCLAIMER: This prototype uses rule-based pattern matching and heuristics.
+// No ML model or autonomous AI agent is used. Analysis is client-side only.
+
 // AI Scam Detection Logic
 function analyzeMessage(text) {
     if (!text || text.trim().length < 10) {
