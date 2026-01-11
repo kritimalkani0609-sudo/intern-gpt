@@ -1,0 +1,11 @@
+{
+  "title": "Intern GPT – AI Powered Internship Scam Detector",
+  "description": "Verify. Report. Stay Safe.",
+  "scan_button": "Scan Internship",
+  "tips": "Safety Tips",
+  "scan_placeholder": "Paste your internship message here...",
+  "result_heading": "Scan Result",
+  "risk_label": "Risk Level:",
+  "safe_label": "Safe",
+  "unsafe_label": "Unsafe"
+}
