@@ -1,3 +1,17 @@
+/* 
+DISCLAIMER:
+This project is a prototype for educational purposes.
+It uses rule-based / keyword-based pattern matching logic.
+No machine learning model or autonomous AI system is used.
+The system only assists users and does not make independent decisions.
+*/
+// NOTE:
+// This function works using predefined rules and keyword checks.
+// It does NOT use any ML model or autonomous AI decision-making.
+function analyzeMessage(text) {
+    // existing logic
+}
+
 // Theme Toggle
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
